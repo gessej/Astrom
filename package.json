@@ -19,12 +19,11 @@
     "date-fns": "^2.23.0",
     "dotenv": "^10.0.0",
     "lit": "^2.2.5",
-    "preact": "^10.7.2",
-    "prismjs": "^1.28.0"
+    "prismjs": "^1.28.0",
+    "@astrojs/rss": "^0.2.0"
   },
-  "dependencies": {
-    "@astrojs/netlify": "^0.4.4",
-    "@astrojs/rss": "^0.2.0",
-    "@astrojs/vercel": "^0.2.3"
+  "Dependencies": {
+    
+
   }
 }

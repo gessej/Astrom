@@ -5,11 +5,9 @@ import lit from "@astrojs/lit";
 
 
 
-
-
 export default defineConfig({
 
-  site: 'http://essej.dev',
+  site: 'https://isnt-gessej-awesome.netlify.app',
   sitemap: false,
   integrations: [sitemap(), preact(), lit()]
 }); 

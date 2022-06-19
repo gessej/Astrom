@@ -5,6 +5,8 @@ import BlogPost from '../../components/BlogPost.astro'
 import { client } from '../../lib/sanityClient.js';
 import { getSanityImageURL } from '../../utils/helpers.js';
 import { allPosts } from '../../lib/api.js';
+import { get } from '../../utils/rss.xml.js';
+
 
 
 export async function getStaticPaths() {
@@ -25,7 +27,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<BlogPostLayout title={post.title} ogImageUrl={getSanityImageURL(post.mainImage).width(1200).url()}>
+<BlogPostLayout title={post.title} ogImageUrl={'' && getSanityImageURL(post.mainImage).width(1200).url()}>
   <ul>
     {post.categories.map(category => (
     <li><a href={`/blog/category/${category.slug.current}`}>{category.title}</a></li>

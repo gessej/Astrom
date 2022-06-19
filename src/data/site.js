@@ -1,9 +1,9 @@
 export default {
     title: `Jesse's Dev Daydream`,
-    description: `Journey into the world of development with me.`,
-    url: `http://essej.dev`, // No trailing slash!
+    description: `A humble Astronaut’s guide to the stars of web development.`,
+    url: `https://isnt-gessej-awesome.netlify.app`, // No trailing slash!
     // JSON LD
-    name: `Jesse`,
+    name: `Jesse Gutierrez`,
     // Facebook URL
     //facebookURL: `https://facebook.com`,
     // Twitter URL
