@@ -23,6 +23,7 @@
     "prismjs": "^1.28.0"
   },
   "dependencies": {
+    "@astrojs/netlify": "^0.4.4",
     "@astrojs/rss": "^0.2.0",
     "@astrojs/vercel": "^0.2.3"
   }
