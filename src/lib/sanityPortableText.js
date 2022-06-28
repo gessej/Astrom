@@ -27,3 +27,5 @@ const customComponents = {
 export function sanityPortableText(portabletext) {
   return toHTML(portabletext, { components: customComponents });
 }
+
+

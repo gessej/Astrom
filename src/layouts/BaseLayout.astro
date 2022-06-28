@@ -1,9 +1,10 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import '../styles/global.css'
 const { title, description, permalink, publishDate, ogImageUrl, canonicalURL } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" data-theme="dracula">
 
 <head>
   <BaseHead title={title} description={description} permalink={permalink} canonicalURL={canonicalURL}
@@ -11,7 +12,14 @@ const { title, description, permalink, publishDate, ogImageUrl, canonicalURL } =
 </head>
 
 <body>
+  <nav class="navbar bg-primary text-primary-content">
+    <ul>
+      <li><a class="btn btn-ghost normal-case text-xl" href=".">Home</a></li>
+      <li><a class="btn btn-ghost normal-case text-xl" href="#">About</a></li>
+      <li><a class="btn btn-ghost normal-case text-xl" href="/blog">Blog</a></li>
+    </ul>
 
+  </nav>
   <main>
     <slot />
   </main>

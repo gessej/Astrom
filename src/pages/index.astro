@@ -3,13 +3,22 @@ import Container from '../components/Container.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 let title = "Jesse's Dev Daydream";
 let description = 'A humble Astronaut’s guide to the stars of web development.';
-let permalink = 'https:essej.dev';
+let permalink = 'https://essej.dev';
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} canonicalURL={Astro.canonicalURL}>
   <Container>
-    <h1>Welcome to the Lair where the Players play and where game on them things like everyy day</h1>
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Hello, I'm Jesse</h1>
+          <p class="py-6">The web has came a long way since i've been out of the loop. Journey with me as I dive into
+            the fundementals of web devlopment after over a decade of being gone</p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
 
-    <a href="/blog">Blog →</a>
   </Container>
+
 </BaseLayout>

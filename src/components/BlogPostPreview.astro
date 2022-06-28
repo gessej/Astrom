@@ -13,6 +13,7 @@ const { post } = Astro.props;
     <h1 class="title">{post.title}</h1>
     <time class="publish-date">{formatBlogPostDate(post.publishedAt)}</time>
     <p>{post.excerpt}</p>
+    <button class="btn btn-xs sm:btn-sm btn-outline">Read More</button>
   </a>
 </article>
 
