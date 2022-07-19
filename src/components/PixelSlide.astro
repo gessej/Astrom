@@ -1,0 +1,24 @@
+---
+import { getSanityImageURL } from '../utils/helpers.js'
+export interface Props {
+    post: any;
+}
+const { post } = Astro.props;
+---
+
+<div class="carousel carousel-center rounded-box">
+
+    <div class="carousel-item">
+        <img src="https://placeimg.com/400/300/arch" alt="Pizza" />
+    </div>
+    <div class="carousel-item">
+        <img src="https://placeimg.com/400/300/arch" alt="Pizza" />
+    </div>
+    <div class="carousel-item">
+        <img src="https://placeimg.com/400/300/arch" alt="Pizza" />
+    </div>
+    <div class="carousel-item">
+        <img src="https://placeimg.com/400/300/arch" alt="Pizza" />
+    </div>
+
+</div>

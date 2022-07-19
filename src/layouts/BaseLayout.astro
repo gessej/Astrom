@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import MainNav from '../components/Mainnav.astro';
 import '../styles/global.css'
 const { title, description, permalink, publishDate, ogImageUrl, canonicalURL } = Astro.props;
 ---
@@ -11,15 +12,8 @@ const { title, description, permalink, publishDate, ogImageUrl, canonicalURL } =
     publishDate={publishDate} ogImageUrl={ogImageUrl} />
 </head>
 
-<body>
-  <nav class="navbar bg-primary text-primary-content">
-    <ul>
-      <li><a class="btn btn-ghost normal-case text-xl" href=".">Home</a></li>
-      <li><a class="btn btn-ghost normal-case text-xl" href="#">About</a></li>
-      <li><a class="btn btn-ghost normal-case text-xl" href="/blog">Blog</a></li>
-    </ul>
-
-  </nav>
+<body class="font-rubik-mono-one">
+  <MainNav />
   <main>
     <slot />
   </main>
