@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+    body {
       font-family: Rubik Mono One, system-ui, sans-serif;
     }
   }
