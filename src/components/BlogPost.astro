@@ -1,13 +1,11 @@
 ---
 import SanityPortableText from './SanityPortableText.astro'
 import { getSanityImageURL, formatBlogPostDate } from '../utils/helpers.js'
-import Container from './Container.astro';
-
-
+import Container from './Container.astro'
 export interface Props {
   post: any;
 }
-const { post } = Astro.props;
+const { post } = Astro.props; 
 ---
 
 <style>
