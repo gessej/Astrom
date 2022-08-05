@@ -3,7 +3,6 @@ module.exports = {
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   theme: {
     extend: {
-    
       fontFamily: {
         'rubik-mono-one': ['"Rubik Mono One"', 'sans-serif'],
       },

@@ -5,7 +5,8 @@ export interface Props {
 const { narrow } = Astro.props;
 ---
 
-<div class={`content__container ${narrow && `content__container--narrow`}`}>
+<div class="container mx-auto content-center">
+  <!-- {`content__container ${narrow && `content__container--narrow`}`} -->
   <slot></slot>
 </div>
 
