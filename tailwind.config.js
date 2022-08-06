@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'rubik-mono-one': ['"Rubik Mono One"', 'sans-serif'],
+        'poppins': ['"poppins"', 'sans-serif'],
       },
     },
   },

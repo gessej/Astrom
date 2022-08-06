@@ -6,7 +6,7 @@ const { title, description, ogImageUrl, publishDate, permalink } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme="night">
 
 <head>
   <BaseHead title={title} description={description} permalink={permalink} ogImageUrl={ogImageUrl}
@@ -17,7 +17,7 @@ const { title, description, ogImageUrl, publishDate, permalink } = Astro.props;
 
 <body>
   <MainNav />
-  <main class="prose font-serif prose-a:text-blue-600 hover:prose-a:text-blue-500 container mx-auto content-center">
+  <main class="prose font-poppins prose-a:text-blue-600 hover:prose-a:text-blue-500 container mx-auto content-center">
     <slot />
   </main>
 </body>

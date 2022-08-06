@@ -11,8 +11,9 @@ let permalink = 'https://essej.dev';
   <Container>
     <div class="hero min-h-screen">
       <div class="hero-content text-center">
-        <div class="max-w-sm">
-          <h1 class="text-5xl font-bold">Hello<span class="text-7xl">&#129305;</span>!
+        <div class="max-w-md">
+          <div class="cloud"></div>
+          <h1 class="text-5xl font-poppins font-bold">Hello<span class="text-7xl">&#129305;</span>!
             <br>I'm Jesse
           </h1>
           <p class="py-6">The web has came a long way since i've been out of the loop. Journey with me as I dive into
@@ -25,3 +26,44 @@ let permalink = 'https://essej.dev';
   </Container>
 
 </BaseLayout>
+
+<style>
+  .cloud {
+
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    position: absolute;
+  }
+
+  .cloud::nth-child(1) {
+    top: 230px;
+    left: 0;
+
+  }
+
+  .cloud::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    border-radius: 55%;
+    bottom: 25px;
+    left: 80px;
+
+    background-color: white;
+  }
+
+  .cloud::after {
+
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+  }
+</style>
