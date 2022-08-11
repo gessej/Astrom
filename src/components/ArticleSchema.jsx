@@ -14,7 +14,7 @@ function ArticleSchema({title, permalink, publishDate, ogImageUrl, description})
             "name": `${site.name}`,
             "image": {
                 "@type": "ImageObject",
-                "url": `${site.url}/assets/img/favicon.png`,
+                "url": `${site.url}/assets/img/favicon.ico`,
                 "width": 512,
                 "height": 512
             },

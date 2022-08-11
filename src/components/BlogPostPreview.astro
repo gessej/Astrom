@@ -6,16 +6,25 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview__article">
-  <a href={`/blog/${post.slug.current}`}>
-    {post.mainImage && <img width="720" height="420" class="post-main__img" loading="lazy"
-      src={getSanityImageURL(post.mainImage).url()} />}
-    <h1 class="title">{post.title}</h1>
+<article class="container mx-auto content-center bg-base-100 card card-compact md:w-5/12 shadow-xl">
+
+  <!-- {post.mainImage && <img width="720" height="420" class="post-main__img" loading="lazy"
+      src={getSanityImageURL(post.mainImage).url()} />} -->
+  <div class="card-body"><a href={`/blog/${post.slug.current}`}>
+      <h1 class="card-title title">{post.title}</h1>
+    </a>
+
     <time class="publish-date">{formatBlogPostDate(post.publishedAt)}</time>
     <p>{post.excerpt}</p>
-    <button class="btn btn-xs sm:btn-sm btn-outline">Read More</button>
-  </a>
+    <div class="card-actions justify-end">
+      <a href={`/blog/${post.slug.current}`}>
+        <button class="btn btn-xs sm:btn-sm btn-outline">Read More</button>
+      </a>
+    </div>
+  </div>
+
 </article>
+
 
 <style>
   a {
