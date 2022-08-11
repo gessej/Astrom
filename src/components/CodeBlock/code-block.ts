@@ -17,8 +17,7 @@ export class CodeBlock extends LitElement {
   @state()
   isCopied = false;
 
-
-  copyCode() {
+  copyCode(): void {
     this.isCopied = true;
     const codeElement = this.shadowRoot.querySelector("code");
     const range = document.createRange();

@@ -39,7 +39,7 @@ export const codeBlockStyles = css`
     font-size: 0.75rem;
   }
   /* PrismJS 1.23.0
-https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+dart+json+markdown+python */
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+dart+json+markdown */
   /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
