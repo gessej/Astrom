@@ -2,6 +2,13 @@
 import Container from '../components/Container.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+import { client } from '../lib/sanityClient.js';
+import { allPosts } from '../lib/api.js';
+const allPostData = await client.fetch(allPosts);
+
+
 let title = "Jesse's Dev Daydream";
 let description = 'A humble Astronaut’s guide to the stars of web development.';
 let permalink = 'https://essej.dev';
@@ -10,23 +17,44 @@ let permalink = 'https://essej.dev';
 
 <BaseLayout title={title} description={description} permalink={permalink} canonicalURL={Astro.canonicalURL}>
   <Container>
-    <div class="hero min-h-screen">
-      <div class="hero-content text-center">
-        <div class="max-w-md content-center">
-          <div class="balloon"></div>
-          <div class="cloud c1"></div>
-          <div class="cloud c2"></div>
-          <div class="cloud c3"></div>
-          <div class="c4 cloud"></div>
-          <!-- <h1 class="text-5xl font-poppins font-bold">Hello<span class="text-7xl">&#129305;</span>!
+
+
+
+
+
+    <div class="hero md:max-h-max pt-8">
+
+      <div class="balloon h-[450px] md:py-8"></div>
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <div class="cloud c3"></div>
+      <div class="c4 cloud"></div>
+
+
+    </div>
+
+    <section class="py-16 sm:py-28 md:py-96 post grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+      {allPostData.map((post) =>
+      <BlogPostPreview post={post} />)}
+    </section>
+
+
+
+
+
+    <!-- <h1 class="text-5xl font-poppins font-bold">Hello<span class="text-7xl">&#129305;</span>!
             <br>I'm Jesse
           </h1>
           <p class="py-6">The web has came a long way since i've been out of the loop. Journey with me as I dive into
             the fundementals of web devlopment after over a decade of being away.</p>
           <button class="btn btn-primary">Get Started <span class="text-2xl">🛩️</span></button> -->
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
+
 
   </Container>
 
@@ -40,7 +68,7 @@ let permalink = 'https://essej.dev';
 
   .c2 {
     left: -25%;
-    top: 10vw;
+    top: 25vw;
   }
 
   .c3 {
@@ -50,13 +78,12 @@ let permalink = 'https://essej.dev';
 
   .c4 {
     left: 75%;
-    top: 35vw;
+    top: 38vw;
   }
 
   .balloon {
-    display: inline-block;
-    width: 35vw;
-    height: 35vh;
+    display: block;
+    width: 45vw;
     margin-bottom: -25vw;
     background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/b620a9e1213eed22a6674ef09e7a68d5b99a4ae8-427x600.svg');
     background-repeat: no-repeat;
@@ -67,8 +94,7 @@ let permalink = 'https://essej.dev';
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    z-index: 1;
-    top: -30vh;
+    /* top: 80vh; */
 
 
   }
@@ -81,7 +107,7 @@ let permalink = 'https://essej.dev';
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    position: absolute;
+    position: relative;
     -webkit-animation: moveclouds 35s linear infinite;
     -moz-animation: moveclouds 35s linear infinite;
     -o-animation: moveclouds 35s linear infinite
