@@ -12,18 +12,18 @@ let permalink = 'https://essej.dev';
   <Container>
     <div class="hero min-h-screen">
       <div class="hero-content text-center">
-        <div class="max-w-md">
+        <div class="max-w-md content-center">
           <div class="balloon"></div>
           <div class="cloud c1"></div>
           <div class="cloud c2"></div>
           <div class="cloud c3"></div>
           <div class="c4 cloud"></div>
-          <h1 class="text-5xl font-poppins font-bold">Hello<span class="text-7xl">&#129305;</span>!
+          <!-- <h1 class="text-5xl font-poppins font-bold">Hello<span class="text-7xl">&#129305;</span>!
             <br>I'm Jesse
           </h1>
           <p class="py-6">The web has came a long way since i've been out of the loop. Journey with me as I dive into
             the fundementals of web devlopment after over a decade of being away.</p>
-          <button class="btn btn-primary">Get Started <span class="text-2xl">🛩️</span></button>
+          <button class="btn btn-primary">Get Started <span class="text-2xl">🛩️</span></button> -->
         </div>
       </div>
     </div>
@@ -35,27 +35,30 @@ let permalink = 'https://essej.dev';
 <style>
   .c1 {
     left: -75%;
+    top: 65vw;
   }
 
   .c2 {
     left: -25%;
-    top: 3vw;
+    top: 10vw;
   }
 
   .c3 {
     left: 25%;
+    top: 55vw;
   }
 
   .c4 {
     left: 75%;
-
+    top: 35vw;
   }
 
   .balloon {
-    width: 90vw;
-    height: 100vw;
-    margin-bottom: -9vw;
-    background-image: url('df.svg');
+    display: inline-block;
+    width: 35vw;
+    height: 35vh;
+    margin-bottom: -25vw;
+    background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/b620a9e1213eed22a6674ef09e7a68d5b99a4ae8-427x600.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -64,22 +67,24 @@ let permalink = 'https://essej.dev';
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+    z-index: 1;
+    top: -30vh;
+
+
   }
 
   .cloud {
     width: 18vw;
     height: 9vw;
     margin-bottom: -9vw;
-    background-image: url('cloud.svg');
+    background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/c001ecaa63bb869414abf3a2f7f122e7b6a25d0d-756x422.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    position: relative;
-    -webkit-animation: moveclouds 40s linear infinite;
-    -moz-animation: moveclouds 40s linear infinite;
-    -o-animation: moveclouds 40s linear infinite
+    position: absolute;
+    -webkit-animation: moveclouds 35s linear infinite;
+    -moz-animation: moveclouds 35s linear infinite;
+    -o-animation: moveclouds 35s linear infinite
       /* background-color: white;
     height: 50px;
     width: 200px;
