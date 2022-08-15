@@ -21,15 +21,15 @@ const { post } = Astro.props;
 
 
 <Container>
-  <article class="post-content__article">
+  <article>
 
 
-    <h1>{post.title}</h1>
+    <h1 class="mb-0">{post.title}</h1>
     <time>{formatBlogPostDate(post.publishedAt)}</time>
-    {post.author && <p>By {post.author.name}</p>}
+    {post.author && <p class="my-0">{post.author.name}</p>}
+    <div class="text-slate-100 leading-7 font-sans font-medium">
+      <SanityPortableText portableText={post.body} />
 
-    <SanityPortableText portableText={post.body} />
-
-
+    </div>
   </article>
 </Container>

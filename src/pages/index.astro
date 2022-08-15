@@ -24,7 +24,7 @@ let permalink = 'https://essej.dev';
 
 
 
-    <div class="balloon h-96 m-0 md:py-8"></div>
+    <div class="balloon h-[28rem] m-0 md:py-8"></div>
 
     <div class="cloud c1"></div>
     <div class="cloud c2"></div>
@@ -37,9 +37,10 @@ let permalink = 'https://essej.dev';
 
 
     <section
-      class="md:my-auto mt-36 relative pt-24 gap-y-4 sm:py-28 md:py-96 post grid grid-cols-1 md:m-0 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+      class="md:my-auto mt-36 relative s:pt-24 gap-y-4 sm:py-28 md:py-56 xl:mt-96 post grid grid-cols-1 md:m-0 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
       <p class="mt-12 text-amber-400 text-center head font-poppins font-bold sticky underline underline-offset-8">
         Recent Posts</p><br>
+
       {allPostData.map((post) =>
       <BlogPostPreview post={post} />)}
     </section>
@@ -70,7 +71,7 @@ let permalink = 'https://essej.dev';
 <style>
   .head {
     font-size: 2.75em;
-    font-weight: 300;
+    font-weight: 700;
 
   }
 
@@ -97,12 +98,13 @@ let permalink = 'https://essej.dev';
   .balloon {
     display: block;
 
-
+    /* https://cdn.sanity.io/images/jm2b1ney/production/b620a9e1213eed22a6674ef09e7a68d5b99a4ae8-427x600.svg */
     margin-bottom: -25vw;
-    background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/b620a9e1213eed22a6674ef09e7a68d5b99a4ae8-427x600.svg');
+    background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/c279c98f58e8b3bc63e48ed7a3e13be93c2764e6-35x49.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+
     position: relative;
     animation-name: floating;
     animation-duration: 3s;
