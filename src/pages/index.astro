@@ -24,25 +24,26 @@ let permalink = 'https://essej.dev';
 
 
 
+
+
+    <div class="cloud c1 "></div>
+    <div class="cloud c2 "></div>
+    <div class="cloud c3 "></div>
+    <div class="cloud c5 "></div>
+    <div class="c4 cloud "></div>
+    <div class="cloud c6 "></div>
     <div class="balloon h-[28rem] m-0 md:py-8"></div>
-
-    <div class="cloud c1"></div>
-    <div class="cloud c2"></div>
-    <div class="cloud c3"></div>
-    <div class="c4 cloud"></div>
-
-
 
 
 
 
     <section
-      class="p-4 md:my-auto mt-36 relative s:pt-24 gap-y-4 sm:py-28 md:py-56 xl:mt-96 post grid grid-cols-1 md:m-0 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
-      <p
-        class="mt-12 text-[#cfff70] hover:text-[#8fde5d] text-center head font-poppins font-bold sticky underline underline-offset-8">
-        Recent Posts</p><br>
+      class="p-4 mt-56 relative s:pt-56 gap-y-4 md:py-56 xl:mt-96 post grid grid-cols-1 md:m-0 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+      <!-- <p
+        class=" text-[#cfff70] hover:text-[#8fde5d] grid grid-flow-row text-center  head font-poppins font-bold sticky underline underline-offset-8">
+        Recent Posts</p> -->
 
-      {allPostData.map((post) =>
+      {allPostData.slice(0,4).map((post) =>
       <BlogPostPreview post={post} />)}
     </section>
 
@@ -70,6 +71,10 @@ let permalink = 'https://essej.dev';
 
 
 <style>
+  .post {
+    z-index: 4;
+  }
+
   .head {
     font-size: 2.75em;
     font-weight: 700;
@@ -77,23 +82,54 @@ let permalink = 'https://essej.dev';
   }
 
   .c1 {
-    left: -75%;
+    left: 65%;
     top: 15vw;
+    -webkit-animation: moveclouds 27s linear infinite;
+    -moz-animation: moveclouds 27s linear infinite;
+    -o-animation: moveclouds 27s linear infinite
   }
 
   .c2 {
-    left: 25%;
-    top: 25vw;
+    left: 35%;
+    top: 22vw;
+    -webkit-animation: moveclouds 38s linear infinite;
+    -moz-animation: moveclouds 38s linear infinite;
+    -o-animation: moveclouds 38s linear infinite
   }
 
   .c3 {
-    left: 25%;
-    top: 21vw;
+    left: 8%;
+    top: 19vw;
+    -webkit-animation: moveclouds 30s linear infinite;
+    -moz-animation: moveclouds 30s linear infinite;
+    -o-animation: moveclouds 30s linear infinite
   }
 
   .c4 {
-    left: 75%;
-    top: 32vw;
+    left: 95%;
+    top: 30vw;
+    z-index: 1;
+    -webkit-animation: moveclouds 22s linear infinite;
+    -moz-animation: moveclouds 22s linear infinite;
+    -o-animation: moveclouds 22s linear infinite
+  }
+
+  .c5 {
+    left: 82%;
+    top: 38vw;
+    z-index: 1;
+    -webkit-animation: moveclouds 35s linear infinite;
+    -moz-animation: moveclouds 35s linear infinite;
+    -o-animation: moveclouds 35s linear infinite
+  }
+
+  .c6 {
+    left: 71%;
+    top: 26vw;
+    z-index: 1;
+    -webkit-animation: moveclouds 22s linear infinite;
+    -moz-animation: moveclouds 22s linear infinite;
+    -o-animation: moveclouds 22s linear infinite
   }
 
   .balloon {
@@ -120,15 +156,13 @@ let permalink = 'https://essej.dev';
     width: 18vw;
     height: 9vw;
     margin-bottom: -9vw;
-    background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/c001ecaa63bb869414abf3a2f7f122e7b6a25d0d-756x422.svg');
+    background-image: url('https://cdn.sanity.io/images/jm2b1ney/production/4081f48ff15fa914cb4b777c8f448612b37cbe7a-24x13.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     position: relative;
-    -webkit-animation: moveclouds 35s linear infinite;
-    -moz-animation: moveclouds 35s linear infinite;
-    -o-animation: moveclouds 35s linear infinite
-      /* background-color: white;
+
+    /* background-color: white;
     height: 50px;
     width: 200px;
     border-radius: 50px;
